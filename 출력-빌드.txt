@@ -1,0 +1,9 @@
+﻿오후 4:52에 빌드를 시작함...
+1>------ 빌드 시작: 프로젝트: Project1, 구성: Debug x64 ------
+1>  260106.cpp
+1>C:\student\김민규\Project1\Project1\260106.cpp(198,8): warning C4477: 'scanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+1>C:\student\김민규\Project1\Project1\260106.cpp(198,8): warning C4477: 'scanf' : 서식 문자열 '%f'에 'float *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+1>C:\student\김민규\Project1\Project1\260106.cpp(198,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+1>  Project1.vcxproj -> C:\student\김민규\Project1\x64\Debug\Project1.exe
+========== 빌드: 1개 성공, 0개 실패, 0개 최신 상태, 0개 건너뜀 ==========
+========== 빌드이(가) 오후 4:52에 완료되었으며, 00.448 초이(가) 걸림 ==========
