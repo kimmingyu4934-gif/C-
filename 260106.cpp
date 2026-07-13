@@ -4081,67 +4081,1013 @@
 //
 //	printf("%d", count);
 //}
-#include <iostream>
-#include <string.h>
-#include <time.h>
+//#include <iostream>
+//#include <string.h>
+//#include <time.h>
+//using namespace std;
+//
+//#define MAXENERGY 6
+//
+//void printenergy(int my)
+//{
+//	printf("내 목숨 : ");
+//	for (int i = 0; i < my; i++)
+//		 cout << "■";
+//	for (int i = my; i < MAXENERGY; i++)
+//		 cout << "□";
+//	cout << "\n" << endl;
+//}
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	char *num = new char[5];
+//	char *tmp = new char[5];
+//
+//	for (int i = 0; i < 4; i++)
+//	{
+//		num[i] = '_';
+//	}
+//	num[4] = NULL;
+//
+//	int answer = rand() % 1000;
+//	sprintf(tmp, "%04d", answer);
+//	int energy = MAXENERGY;
+//	char input;
+//	while (1)
+//	{
+//		printenergy(energy);
+//		if (!energy)
+//		{
+//			cout << "게임 오버..." << endl;
+//			cout << "정답 : " << tmp;
+//			break;
+//		}
+//		cout << "정답 : " << num << endl << endl;
+//		if (atoi(num) == answer)
+//		{
+//			cout << "게임 승리" << endl;
+//			break;
+//		}
+//		cout << "숫자를 맞춰보세요 : ";
+//		cin >> input;
+//
+//		bool check = true;
+//		for (int i = 0; i < 4; i++)
+//		{
+//			if (tmp[i] == input)
+//			{
+//				num[i] = input;
+//				check = false;
+//			}
+//		}
+//		if (check) energy--;
+//	}
+//
+//	delete num;
+//	delete tmp;
+//
+//	return 0;
+
+//#include <iostream>
+//using namespace std;
+//
+//void hp(int hp_1)
+//{
+//	printf("내 목숨 : ");
+//	for (int i = 0; i < hp_1; i++)
+//		printf("■");
+//
+//
+//}
+//
+//int main()
+//{
+//	hp(5); 
+//	string  true1[5] = { "H","E","L","L","O" };
+//
+//	while (hp_1 <= 0)
+//	{
+//
+//	}
+//}
+//#include <iostream>
+//using namespace std;
+//
+//void greet(string name)
+//{
+//	 cout << "안녕," << name << "!" << endl;
+//}
+//
+//void main()
+//{
+//	greet("이샘");
+//	greet("코딩");
+//}
+//#include <iostream>
+//using namespace std;
+//
+//void person_pocket(char who, int money)
+//{
+//	cout << who << "의 주머니에";
+//	cout << money << "원\n";
+//}
+//
+//void main()
+//{
+//	person_pocket('A', 10000);
+//	person_pocket('B', 5000);
+//}
+//#include <iostream>
+//
+//using namespace std;
+//
+//void print_Number()
+//{
+//	cout << "Number" << endl;
+//}
+//void print_Number2(int num)
+//{
+//	cout << "Number :%d\n" << num << endl;
+//}
+//void Number4_charB(int num, char b)
+//{
+//	printf("Number :%d, charater :%c\n", num, b);
+//}
+//void print_charaterX(char X)
+//{
+//	cout << "charater :" << X << endl;
+//}
+//void main()
+//{
+//	print_Number();
+//	print_Number2(2);
+//	Number4_charB(4, 'b');
+//	print_charaterX('X');
+//}
+//#include <iostream>
+//
+//using namespace std;
+//
+//void print(string input2)
+//{
+//	cout << " " << input2 << endl;
+//}
+//
+//void main()
+//{
+//	string input;
+//	cout << "출력할 커피이름을 입력하세요 :";
+//	cin >> input;
+//	print(input);
+//}
+//#include <iostream>
+//
+//using namespace std;
+//
+//char getB() { return 'B'; }
+//
+//char getE() { return 'E'; }
+//
+//int main()
+//{
+//	printf("벌을 영어로?");
+//	cout << getB() << getE() << getE() << endl;
+//}
+/*#include <iostream>
+
 using namespace std;
 
-#define MAXENERGY 6
 
-void printenergy(int my)
+int function_test2()
 {
-	printf("내 목숨 : ");
-	for (int i = 0; i < my; i++)
-		 cout << "■";
-	for (int i = my; i < MAXENERGY; i++)
-		 cout << "□";
-	cout << "\n" << endl;
+	int testNumber = 5;
+	return testNumber;
 }
 
 int main()
 {
-	srand((unsigned int)time(NULL));
-	char *num = new char[5];
-	char *tmp = new char[4];
+	int getNumber = function_test2();
+	cout << "founction_test2()에서" << "가져온 값 : " << getNumber;
+}*/
+//#include <iostream>
+//using namespace std;
+//
+//float sendCard()
+//{
+//	cout << "크리스마스 카드>" << endl;
+//	cout << "비용 : 0.7만원" << endl;
+//	cout << "지불하기(단위 :만원) : " << endl;
+//
+//	int manwon;
+//	scanf("%d", &manwon);
+//	float change = manwon - 0.7;
+//	return change;
+//}
+//
+//int main()
+//{
+//	float result = sendCard();
+//	cout << result << "만원 받음" << endl;
+//	return 0;
+//}
 
-	for (int i = 0; i < 4; i++)
-	{
-		num[i] = '_';
-	}
-	num[4] = NULL;
+//#include <iostream>
+//
+//using namespace std;
+//
+//char getA() { return 'A'; }
+//
+//char getP() { return 'P'; }
+//
+//char getL() { return 'L'; }
+//
+//char getE() { return 'E'; }
+//
+//void main()
+//{
+//	cout << "사과를 영어로? >>";
+//	cout << getA() << getP() << getP() << getL() << getE() << endl;
+//}
 
-	int answer = rand() % 1000;
-	sprintf(tmp, "%03d", answer);
-	int energy = MAXENERGY;
-	char input;
-	while (1)
-	{
-		printenergy(energy);
-		if (!energy)
-		{
-			cout << "게임 오버..." << endl;
-			cout << "정답 : " << tmp;
-			break;
-		}
-		cout << "정답 : " << num << endl << endl;
-		if (atoi(num) == answer)
-		{
-			cout << "게임 승리" << endl;
-			break;
-		}
-		cout << "숫자를 맞춰보세요 : ";
-		cin >> input;
+//#include <iostream>
+//using namespace std;
+//
+//int sum(int a)
+//{
+//	for (int i = 2; i <= 10; i++)
+//	{
+//		a += i;
+//	}
+//
+//	return a;
+//}
+//
+//void main()
+//{
+//	int result = sum(1);
+//	printf("%d",result);
+//}
+//#include <iostream>
+//using namespace std;
+//
+//int square(int n) { return n * n; }
+//
+////int main() { cout << square(5) << endl; }
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//string printMenu(string name)
+//{
+//	return name;
+//}
+//string printMenu(string name, int price)
+//{
+//	return name + "(우유" + to_string(price) + "ml)";
+//}
+//
+//void main()
+//{
+//	string menus[2] = { printMenu("아메리카노"),printMenu("라뗴",50) };
+//	for (int i = 0; i < 2; i++)
+//	{
+//		cout << menus[i] << endl;
+//	}
+//}
+//#include <iostream>
+//using namespace std;
+//
+//int square(int n);
+//int main()
+//{
+//	cout << square(5) << endl;
+//}
+//int square(int n)
+//{
+//	return n * n;
+//}
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//string printMenu(string name);
+//string printMenu(string name, int price);
+//
+//void main()
+//{
+//	string menus[2] = { printMenu("아메리카노"),printMenu("라뗴",50) };
+//	for (int i = 0; i < 2; i++)
+//		cout << menus[i] << endl;
+//}
+//
+//string printMenu(string name)
+//{
+//	return name;
+//}
+//
+//string printMenu(string name, int price)
+//{
+//	return name + "(우유" + to_string(price) + "ml)";
+//}
+//#include <iostream>
+//using namespace std;
+//char rightType(char type) {
+//	if (type != 'A' && type != 'B') {
+//		cout << "주문할 수 없는 햄버거입니다.\n";
+//		return 'C';
+//	}
+//	return type;
+//}
+//
+//void makeHamburger(char type, int count) {
+//	if (type == 'A') {
+//		cout << "A타입 햄버거";
+//	}
+//
+//	else {
+//		cout << "B타입 햄버거";
+//	}
+//	cout << count << " 개 나왔습니다" << endl;
+//}
+//
+//int main()
+//{
+//	char ham_type;
+//	int ham_count;
+//	cout << "어느타입 햄버거를";
+//	cout << "주문하시겠습니까?(A or B)" << endl;
+//	cin >> ham_type;
+//	if (rightType(ham_type) == 'C') {
+//		return -1;
+//	}
+//	cout << "햄버거 몇 개 주문하시겠습니까?." << endl;
+//	cin >> ham_count;
+//	makeHamburger(ham_type, ham_count);
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//void main()
+//{
+//	FILE* rfile = fopen("영단어.txt", "r");
+//	FILE* wfile = fopen("영단어2.txt", "w");
+//
+//	char words[1000] = {};
+//	int count = 1;
+//	for (int i = 0; i < 1000 && !feof(rfile); i++)
+//	{
+//		fscanf(rfile,"%c", &words[i]);
+//
+//		if (words[i] == ',')
+//		{
+//			count++;
+//			printf("\n");
+//			fprintf(wfile , "\n");
+//		}
+//			
+//		else
+//		{
+//			printf("%c", words[i]);
+//			fprintf(wfile, "%c", words[i]);
+//		}	
+//	}
+//	fprintf(wfile, "\n%d개", count);
+//
+//	fclose(rfile);
+//	fclose(wfile);
+//}
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//#include <stdlib.h>
+//#include <time.h>
+//using namespace std;
+//
+//#define MAXENERGY 6
+//
+//void print_energy(int hp)
+//{
+//	printf("내 목숨 : ");
+//	for (int i = 0; i < hp; i++)
+//		printf("■");
+//	for (int i = hp; i < MAXENERGY; i++)
+//		printf("□");
+//	printf("\n");
+//}
+//
+//string word()
+//{
+//	ifstream fin("영단어2.txt");
+//
+//	int len;
+//	fin >> len;
+//
+//	string word;
+//	string* words = new string[len];
+//	for (int i = 0; i < len; i++)
+//	{
+//		fin >> word;
+//		words[i] = word;
+//	}
+//
+//	fin.close();
+//
+//	srand((unsigned int)time(NULL));
+//
+//	int num = rand() % 25;
+//	string str = words[num];
+//	delete[] words;
+//	return str;
+//}
+//
+//int main()
+//{
+//	print_energy(MAXENERGY);
+//	int count = 0;
+//	char wrong[MAXENERGY] = {};
+//	int minus = 0;
+//	int my_energy = MAXENERGY;
+//	string answer = word();
+//	char answer2;
+//	int length = answer.length();
+//
+//	char* num = new char[length + 1];
+//	for (int i = 0; i < length; i++)
+//	{
+//		num[i] = '_';
+//	}
+//
+//	num[length] = NULL;
+//	cout << num << endl;
+//
+//	for (int i = 0; my_energy != 0; i++)
+//	{
+//		int flag = 0;
+//		cin >> answer2;
+//		for (int j = 0; j < length; j++)
+//		{
+//			if (answer[j] == answer2)
+//			{
+//				num[j] = answer2;
+//				cout << num << endl;
+//				flag = 1;
+//				count++;
+//			}
+//		}
+//		if(flag == 0)
+//		{
+//			my_energy--;
+//			wrong[minus] = answer2;
+//			cout << num << endl;
+//			cout << "틀린단어: ";
+//			for (int i = 0; i <=minus; i++)
+//			{
+//				if (i == 0)
+//				{
+//					cout << wrong[i];
+//				}
+//				else
+//				{
+//					cout << ", " << wrong[i];
+//				}
+//			}
+//			cout << endl;
+//			minus++; 
+//		}
+//		print_energy(my_energy);
+//
+//		if (count == length)
+//		{
+//			break;
+//		}
+//	}
+//	if (my_energy > 0)
+//	{
+//		cout << "정답입니다!!!" << endl;
+//	}
+//	else
+//	{
+//		cout << "탈락입니다..." << endl;
+//	}
+//}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//#define FAIL -1
+//#define WIN_COMPUTER 0
+//#define LOSE_COMPUTER 1
+//#define DRAW 2
+//#define TRUE 0
+//
+//
+//
+//int whowhat(const char* who, int what)
+//{
+//
+//	if (what == 0) 	
+//	{
+//		printf	("%s : 가위\n", who);
+//	}
+//	else if (what == 1)
+//	{
+//		printf("%s : 바위\n", who);
+//	}
+//	else if (what == 2)
+//	{
+//		printf("%s : 보\n", who);
+//	}
+//	else return FAIL;
+//
+//
+//	return TRUE;
+//		
+//}
+//
+//
+//int compare_victory(int com, int me)
+//{
+//	whowhat("컴퓨터", com);	
+//	if (com == me) return DRAW;
+//	else if (com - me == 2 || com - me == -1) return WIN_COMPUTER;
+//	else	return LOSE_COMPUTER;
+//
+//
+//}
+//void main()
+//{
+//
+//	int com = 0;
+//	int me = 0;
+//	char ask_finish = 0;
+//	int human = 0, computer = 0, draw = 0;
+//	int tmp = 0;
+//
+//	FILE* rfile = fopen("store1.txt", "r");
+//	if (rfile != NULL)
+//	{
+//		printf("전에 하셨던 게임을 불러오시겠습니까?(y/n):");
+//		scanf("%c", &ask_finish);
+//		if (ask_finish == 'y')
+//		{
+//			fscanf(rfile, "%d", &human);
+//			fscanf(rfile, "%d", &computer);
+//			fscanf(rfile, "%d", &draw);
+//			printf("\n사람이 이긴횟수 = %d, ", human);
+//			printf("컴퓨터가 이긴횟수 = %d, 동점 = %d\n\n", computer, draw);
+//		
+//		}
+//		fclose(rfile);
+//	}
+//
+//	ask_finish = 0;
+//	srand(time(NULL));
+//	while (true)
+//	{
+//		com = rand() % 3;
+//		printf("0.가위,1.바위,2.보\n당신이 낼 것은?:");
+//		scanf("%d", &me);
+//		if(whowhat("당신", me) == FAIL){
+//			printf("\n반칙! 다시 내 주세요\n");
+//			continue;
+//		}
+//		tmp = compare_victory(com, me);
+//		if (tmp == WIN_COMPUTER)
+//		{
+//			printf("컴퓨터가 이겼습니다.\n");
+//			computer++;
+//		}
+//		else if (tmp == LOSE_COMPUTER)
+//		{
+//			printf("사람이 이겼습니다.\n");
+//			human++;
+//		}
+//		else if (tmp == DRAW)
+//		{
+//			printf("비겼습니다\n");
+//			draw++;
+//		}
+//		printf("\n사람이 이긴횟수 = %d, ", human);
+//		printf("컴퓨터가 이긴횟수 = %d, 동점 = %d\n\n", computer, draw);
+//		printf("다시 게임을 하시겠습니까(y/n) :");
+//		do 
+//		{
+//			ask_finish = (char)getchar();
+//		}
+//		while (ask_finish == '\n');
+//		if (ask_finish == 'n')
+//		{
+//		
+//			break;
+//		}
+//		printf("\n");
+//	}
+//	FILE* wfile = fopen("store1.txt", "w");
+//	fprintf(wfile, "%d %d %d", human, computer, draw);
+//	fclose(wfile);
+//}
+//#include <iostream>
+//
+//int pop(int *stack2,int num2)
+//{
+//	if (num2 <= 0)
+//	{
+//		printf("stack 이 비어있습니다.\n");
+//		return num2;
+//	}
+//
+//	printf("빠져나온값 :%d\n", stack2[--num2]);
+//	return num2;
+//}
+//
+//int push(int *stack,int num)
+//{
+//	int input;
+//	if (num < 0) return num;
+//
+//	printf("stack에 넣을 값을 입력해주세요: ");
+//	scanf("%d", &input);
+//	stack[num++] = input;
+//	return num;
+//}
+//
+//void print(int *stack3, int num3)
+//{
+//	printf("\n<stack 내부>\n");
+//	for (int i = 0; i < num3; i++)
+//	{
+//		printf("| %d ",stack3[i]);
+//	}
+//		printf("\n");
+//}
+//
+//int main()
+//{
+//	int stack_buff[256];
+//	int top = 0, value, choice;
+//	bool while_flag = true;
+//
+//	while (while_flag)
+//	{
+//		printf("[stack]\n1.push\n2.pop\n: ");
+//		scanf("%d", &choice);
+//
+//		switch (choice)
+//		{
+//		case 1:
+//			top = push(stack_buff, top);
+//			break;
+//		case 2:
+//			top = pop(stack_buff,top);
+//			break;
+//		default:
+//			while_flag = false;
+//			break;
+//		}
+//		print(stack_buff,top);
+//	}
+//}
+//
+//#include <iostream>
+//
+//int pop(int* stack2, int num2)
+//{
+//	if (num2 <= 0)
+//	{
+//		printf("stack 이 비어있습니다.\n");
+//		return num2;
+//	}
+//
+//	printf("빠져나온값 :%d\n", stack2[--num2]);
+//	return num2;
+//}
+//
+//int push(int* stack, int num)
+//{
+//	int input;
+//	if (num < 0) return num;
+//
+//	printf("stack에 넣을 값을 입력해주세요: ");
+//	scanf("%d", &input);
+//	stack[num++] = input;
+//	return num;
+//}
+//
+//void print(int* stack3, int num3)
+//{
+//	printf("\n<stack 내부>\n");
+//	for (int i = 0; i < num3; i++)
+//	{
+//		printf("| %d ", stack3[i]);
+//	}
+//	printf("\n");
+//}
+//
+//void save(int* svaer,int num)
+//{
+//	FILE* writefile = fopen("copy.txt", "w");
+//	fprintf(writefile, "%d\n", num);
+//	for(int i = 0; i < num; i++)
+//		fprintf(writefile, "%d ", svaer[i]);
+//	fclose(writefile);
+//}
+//
+//int data_load(int *data)
+//{
+//	int top;
+//	FILE* readfile = fopen("copy.txt", "r");
+//	if (readfile == NULL)
+//	{
+//		printf("반환 할 데이터가 없습니다.\n");
+//		return 0;
+//	}
+//	else
+//	{
+//		fscanf(readfile, "%d", &top);
+//		for (int i = 0; i < top; i++)
+//			fscanf(readfile, "%d", &data[i]);
+//		fclose(readfile);
+//
+//		print(data,top);
+//	}
+//	return top;
+//}
+//
+//int main()
+//{
+//	char input;
+//	int stack_buff[256];
+//	int top = 0, value, choice;
+//	bool while_flag = true;
+//	printf("파일을 불러오시겠습니까?(y/n)");
+//	scanf("%c", &input);
+//	if (input == 'y')
+//	{
+//		top = data_load(stack_buff);
+//	}
+//
+//	while (while_flag)
+//	{
+//		printf("[stack]\n1.push\n2.pop\n: ");
+//		scanf("%d", &choice);
+//
+//		switch (choice)
+//		{
+//		case 1:
+//			top = push(stack_buff, top);
+//			break;
+//		case 2:
+//			top = pop(stack_buff, top);
+//			break;
+//		default:
+//			while_flag = false;
+//			save(stack_buff,top);
+//			break;
+//		}
+//		print(stack_buff, top);
+//	}
+//}
 
-		bool check = true;
-		for (int i = 0; i < 3; i++)
-		{
-			if (tmp[i] == input)
-			{
-				num[i] = input;
-				check = false;
-			}
-		}
-		if (check) energy--;
-	}
-	return 0;
-}
+
+//#include <iostream>
+//
+//
+//struct STACK {
+//	int stack_buff[256];
+//	int top;
+//};
+//
+//void pop(STACK *pstack)
+//{
+//	//(*pstack).top
+//
+//
+//	if (pstack->top <= 0)
+//	{
+//		printf("stack 이 비어있습니다.\n");
+//		return;
+//	}
+//
+//	printf("빠져나온값 :%d\n", pstack->stack_buff[--pstack->top]);
+//}
+//
+//void push(STACK *fstack)
+//{
+//	int input;
+//	if (fstack -> top < 0) return;
+//
+//	printf("stack에 넣을 값을 입력해주세요: ");
+//	scanf("%d", &input);
+//	fstack -> stack_buff[fstack -> top] = input;
+//}
+//
+//void print(int* stack3, int num3)
+//{
+//	printf("\n<stack 내부>\n");
+//	for (int i = 0; i < num3; i++)
+//	{
+//		printf("| %d ", stack3[i]);
+//	}
+//	printf("\n");
+//}
+//
+//void save(int* svaer, int num)
+//{
+//	FILE* writefile = fopen("copy.txt", "w");
+//	fprintf(writefile, "%d\n", num);
+//	for (int i = 0; i < num; i++)
+//		fprintf(writefile, "%d ", svaer[i]);
+//	fclose(writefile);
+//}
+//
+//int data_load(int* data)
+//{
+//	int top;
+//	FILE* readfile = fopen("copy.txt", "r");
+//	if (readfile == NULL)
+//	{
+//		printf("반환 할 데이터가 없습니다.\n");
+//		return 0;
+//	}
+//	else
+//	{
+//		fscanf(readfile, "%d", &top);
+//		for (int i = 0; i < top; i++)
+//			fscanf(readfile, "%d", &data[i]);
+//		fclose(readfile);
+//
+//		print(data, top);
+//	}
+//	return top;
+//}
+//
+//int main()
+//{
+//	char input;
+//	STACK stack;
+//	int value, choice;
+//	bool while_flag = true;
+//	printf("파일을 불러오시겠습니까?(y/n)");
+//	scanf("%c", &input);
+//	if (input == 'y')
+//	{
+//		top = data_load(stack_buff);
+//	}
+//
+//	while (while_flag)
+//	{
+//		printf("[stack]\n1.push\n2.pop\n: ");
+//		scanf("%d", &choice);
+//
+//		switch (choice)
+//		{
+//		case 1:
+//			top = push(stack_buff, top);
+//			break;
+//		case 2:
+//			top = pop(stack_buff, top);
+//			break;
+//		default:
+//			while_flag = false;
+//			save(stack_buff, top);
+//			break;
+//		}
+//		print(stack_buff, top);
+//	}
+//}
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if (n % i == 0)
+//			cout << i << ' ';
+//	}
+//}
+//#include <iostream>
+//#include <time.h>
+//#include <stdlib.h>
+//
+//using namespace std;
+//int main()
+//{
+//	srand(unsigned(time(NULL)));
+//	int user,com;
+//	com = rand() % 3 + 1;
+//	cout << "1.주먹 2.가위 3.보자기\n>> ";
+//	cin >> user;
+//	cout << "컴퓨터 : " << com << endl;
+//	switch (user)
+//	{
+//	case 1:
+//		if (com == 2)
+//			cout << "win";
+//		else if (com == 3)
+//			cout << "lose";
+//		else
+//			cout << "draw";
+//		break;
+//
+//	case 2:
+//		if (com == 3)
+//			cout << "win";
+//		else if (com == 1)
+//			cout << "lose";
+//		else
+//			cout << "draw";
+//		break;
+//
+//	case 3:
+//		if (com == 1)
+//			cout << "win";
+//		else if (com == 2)
+//			cout << "lose";
+//		else
+//			cout << "draw";
+//		break;
+//	}
+//}
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int x, y;
+//	int c_x = 0, c_y = 0,count = 0;
+//	cin >> x >> y;
+//
+//	int x_list[256];
+//	int y_list[256];
+//	int c_measure[256];
+//
+//	for (int i = 1; i <= x; i++)
+//	{
+//		if (x % i == 0)
+//		{
+//			x_list[c_x] = i;
+//			c_x++;
+//		}
+//	}
+//
+//	for (int i = 1; i <= y; i++)
+//	{
+//		if (y % i == 0)
+//		{
+//			y_list[c_y] = i;
+//			c_y++;
+//		}	
+//	}
+//
+//	for (int i = 0; i < c_x; i++)
+//	{
+//		for (int j = 0; j < c_y; j++)
+//		{
+//			if (x_list[i] == y_list[j])
+//			{
+//				c_measure[count] = x_list[i];
+//				count++;
+//				break;
+//			}
+//				
+//		}
+//	}
+//
+//	cout << "x.y의 최대 공약수>> " << c_measure[count-1];
+//
+//	return 0;
+//}
+//
+//#include <iostream>
+//
+//using namespace std;
+//
+//int measure(int a, int b)
+//{
+//	if (b == 0)
+//		return a;
+//
+//	if (a > b)
+//	{
+//		return measure(b, a % b);
+//	}
+//
+//	else
+//	{
+//		return measure(a, b % a);
+//	}
+//}
+//
+//int main()
+//{
+//	int x, y;
+//	cin >> x >> y;
+//	cout << measure(x, y);
+//}
