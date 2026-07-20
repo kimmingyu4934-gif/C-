@@ -4955,7 +4955,8 @@ int main()
 //		}
 //		print(stack_buff, top);
 //	}
-//}
+//} 
+
 //#include <iostream>
 //
 //using namespace std;
@@ -4979,40 +4980,20 @@ int main()
 //int main()
 //{
 //	srand(unsigned(time(NULL)));
-//	int user,com;
+//	int user, com;
 //	com = rand() % 3 + 1;
+//	string a[3] = {"주먹","가위","보자기"};
 //	cout << "1.주먹 2.가위 3.보자기\n>> ";
 //	cin >> user;
-//	cout << "컴퓨터 : " << com << endl;
-//	switch (user)
-//	{
-//	case 1:
-//		if (com == 2)
-//			cout << "win";
-//		else if (com == 3)
-//			cout << "lose";
-//		else
-//			cout << "draw";
-//		break;
+//	cout << "컴퓨터 : " << a[com-1] << endl;
 //
-//	case 2:
-//		if (com == 3)
-//			cout << "win";
-//		else if (com == 1)
-//			cout << "lose";
-//		else
-//			cout << "draw";
-//		break;
+//	if (user - com == -1 || user - com == 2)
+//		cout << "win";
 //
-//	case 3:
-//		if (com == 1)
-//			cout << "win";
-//		else if (com == 2)
-//			cout << "lose";
-//		else
-//			cout << "draw";
-//		break;
-//	}
+//	else if (user - com == 1 || user - com == -2)
+//		cout << "lose";
+//	else
+//		cout << "draw";
 //}
 //#include <iostream>
 //
@@ -5064,7 +5045,7 @@ int main()
 //
 //	return 0;
 //}
-//
+
 //#include <iostream>
 //
 //using namespace std;
@@ -5091,3 +5072,268 @@ int main()
 //	cin >> x >> y;
 //	cout << measure(x, y);
 //}
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	for (int i = 1; i <= 100; i++)
+//	{
+//		printf("%-3d", i);
+//		if (i % 10 == 0)
+//			cout << endl;
+//	}
+// return 0;
+//}
+
+//#include <iostream>
+//
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//
+//	switch (n/10)
+//	{
+//		case 10:
+//			cout << "a+";
+//			break;
+//
+//		case 9:
+//			cout << "a";
+//			break;
+//
+//		case 8:
+//			cout << "b";
+//			break;
+//
+//		case 7:
+//			cout << "c";
+//			break;
+//
+//		case 6:
+//			cout << "d";
+//			break;
+//
+//		default:
+//			cout << "f";
+//	}
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//
+//int main()
+//{
+//	int n,sum = 0;
+//	cin >> n;
+//	for (int i = 1; i <= n; i++)
+//		sum += i;
+//	cout << sum;
+//}
+//#include <iostream>
+//using namespace std;
+//
+//int sum2(int a)
+//{
+//	if (a <= 1) return 1;
+//	return sum2(a - 1) + a;
+//}
+//
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	cout << sum2(n);
+//}
+//5
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if (n % i == 0)
+//			cout << i << " ";
+//	}
+//}
+//7
+//#include <iostream>
+//using namespace std;
+//
+//int main()
+//{
+//	int p1,p2;
+//	while()
+//
+//	for (int i = 1; i <= x; i++)
+//	{
+//		if (i / 10 == 3 || i / 10 == 6 || i / 10 == 9 || i % 10 == 3 || i % 10 == 6 || i % 10 == 9)
+//			cout << " ";
+//		else
+//			cout << i <<" ";
+//	}
+//	return 0;
+//}
+//10
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int end;
+//	cin >> end;
+//	end /= 2;
+//	int space = end -1;
+//	int print1 = 1;
+//
+//	for (int i = 0; i < end; i++, space--, print1 += 2)
+//	{
+//		for (int k = 0; k < space; k++)
+//			cout << " ";
+//
+//		for (int j = 0; j < print1; j++)
+//			cout << "*";
+//		cout << endl;
+//	}
+//
+//	print1 -= 2;
+//	space++;
+//
+//	for (int i = 0; i < end; i++, space++, print1 -= 2)
+//	{
+//		for (int k = space; k > 0; k--)
+//			cout << " ";
+//
+//		for (int j = print1; j > 0; j--)
+//			cout << "*";
+//		cout << endl;
+//	}
+//}
+//9
+//#include <iostream>
+//
+//using namespace std;
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	
+//	int *lists =new int[n];
+//	lists[0] = 1;
+//	lists[1] = 1;
+//	for (int i = 2; i < n; i++)
+//	{
+//		lists[i] = lists[i - 1] + lists[i - 2];
+//	}
+//	cout << lists[n-1] << endl;
+//	delete lists;
+//}
+
+#include <iostream>
+
+using namespace std;
+
+int a_binary_number(int num, char *p)
+{
+	int i = 0;
+	for (i = 0; num > 0;i++)
+	{
+		if(num % 2==0)
+			p[i] = 0+'0';
+
+		else if(num % 2 == 1)
+			p[i] = 1+'0';
+		num /= 2;
+	}
+	i--;
+	return i;
+}
+
+int b_binary_number(int num, char *p)
+{
+	int i = 0;
+	for (i = 0; num > 0; i++)
+	{
+		if(num % 16==)
+			p[i] = 
+		num = num / 16;
+	}
+	i--;
+	return i;
+}
+
+int main()
+{
+	char lists[256] = {};
+	int a;	cout << "2,16" << endl;	cin >> a;
+	int b; cin >> b;
+	int count;
+	if (a == 2)
+	{
+		count = a_binary_number(b, lists);
+		cout << "d" << endl;
+		for (int i = count; i > -1; i--)
+			printf("%d", lists[i]);
+		cout << endl << "c" << endl;
+		for (int i = count; i > -1; i--)
+			printf("%c", lists[i]);
+		//cout << lists[i];
+	}
+		
+	else if (a == 16)
+		count = b_binary_number(b , lists);
+
+	//for (int i = count; i > -1; i--)
+	//	cout << lists[i];
+
+}
+// 
+// 11
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int n1, n2;	cin >> n1 >> n2;
+//
+//	int **p = new int*[n1];
+//	for (int i = 0; i < n1; i++)
+//	{
+//		p[i] = new int[n2];
+//		for (int j = 0; j < n2; j++)
+//		{
+//			p[i][j] = i * j;
+//		}
+//	}
+//
+//	for (int i = 0; i < n1; i++)
+//	{
+//		for (int j = 0; j < n2; j++)
+//		{
+//			cout << p[i][j] << " ";
+//		}
+//	}
+//}
+
+//#include <iostream>
+//#include <string>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	string n;	cin >> n;
+//	int a = stoi(n);
+//}
+
