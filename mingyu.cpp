@@ -236,3 +236,73 @@
 //	a.replace(a.find(a_word), a_word.length(), new_word);
 //	cout << a;
 //}
+//--포커 카드 섞기--
+//#include <iostream>
+//#include <stdlib.h>
+//#include <time.h>
+//using namespace std;
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int pocker_num[52] = {};
+//	for (int i = 0; i < 52; i++)
+//	{
+//		int flag = 1;
+//		int random = rand() % 52 + 1;
+//		for (int j = 0; j < i; j++)
+//		{
+//			if (pocker_num[j] == random)
+//			{
+//				i--;
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if (flag)
+//			pocker_num[i] = random;
+//	}
+//
+//	for(int i = 0; i < 52; i++)
+//		cout << pocker_num[i] << " ";
+//}
+//--자기이름 코드값 출력--
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//int hexa(int a, char *p)
+//{
+//	int i = 0;
+//		for (i = 0; a > 0; i++)
+//		{
+//			if (a % 16 < 10)
+//			{
+//				p[i] = a % 16 + '0';
+//			}
+//	
+//			else
+//			{
+//				p[i] = a % 16 - 10 + 0x41;
+//			}
+//			a = a / 16;
+//		}
+//		i--;
+//		return i;
+//}
+//int main()
+//{
+//	string name;
+//	cin >> name;
+//	int lengh = name.length();
+//	for (int i = 0; i < lengh; i++)
+//	{
+//		int name_num = (int)name[i];
+//		char lists[100] = {};
+//		int return1 = hexa(name_num,lists);
+//
+//		for (int j = return1; j >= 0; j--)
+//			cout << lists[j];
+//		cout << " ";
+//	}
+//		return 0;
+//}
