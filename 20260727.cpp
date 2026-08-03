@@ -5666,31 +5666,166 @@ int main()
 //	}
 //	return 0;
 //}
+//#include <iostream>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//int swap(int *a1, int *b1)
+//{
+//	int store;
+//	store = *a1;
+//	*a1 = *b1;
+//	*b1 = store;
+//	return 0;
+//}
+//
+//int swap(int &a2, int &b2)
+//{
+//	int store;
+//	store = a2;
+//	a2 = b2;
+//	b2 = store;
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a, b;
+//	cin >> a >> b;
+//
+//	swap(&a, &b);
+//	cout << a << " " << b << endl;
+//
+//	swap(a, b);
+//	cout << a << " " << b << endl;
+//}
+//--포커 카드 섞기--
+//#include <iostream>
+//#include <stdlib.h>
+//#include <time.h>
+//using namespace std;
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int pocker_num[52] = {};
+//	for (int i = 0; i < 52; i++)
+//	{
+//		int flag = 1;
+//		int random = rand() % 52 + 1;
+//		for (int j = 0; j < i; j++)
+//		{
+//			if (pocker_num[j] == random)
+//			{
+//				i--;
+//				flag = 0;
+//				break;
+//			}
+//		}
+//		if (flag)
+//			pocker_num[i] = random;
+//	}
+//
+//	for(int i = 0; i < 52; i++)
+//		cout << pocker_num[i] << " ";
+//}
+//#include <iostream>
+//#include <stdlib.h>
+//#include <time.h>
+//using namespace std;
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int store;
+//	int lists[52] = {};
+//	for (int i = 1; i <= 52; i++)
+//		lists[i-1] = i;
+//
+//	for (int i = 0; i < 52; i++)
+//	{
+//		int random = rand() % 52;
+//		store = lists[i];
+//		lists[i] = lists[random];
+//		lists[random] = store;
+//	}
+//
+//	for (int i = 0; i < 52; i++)
+//		cout << lists[i] << " ";
+//}
+//--자기이름 코드값 출력--
+////#include <iostream>
+////#include <string>
+////using namespace std;
+//
+////int hexa(int a, char *p)
+////{
+////	int i = 0;
+////		for (i = 0; a > 0; i++)
+////		{
+////			if (a % 16 < 10)
+////			{
+////				p[i] = a % 16 + '0';
+////			}
+////	
+////			else
+////			{
+////				p[i] = a % 16 - 10 + 0x41;
+////			}
+////			a = a / 16;
+////		}
+////		i--;
+////		return i;
+////}
+////int main()
+////{
+////	string name;
+////	cin >> name;
+////	int lengh = name.length();
+////	//for (int i = 0; i < lengh; i++)
+////	//{
+////	//	int name_num = (int)name[i];
+////	//	char lists[100] = {};
+////	//	int return1 = hexa(name_num,lists);
+////
+////	//	for (int j = return1; j >= 0; j--)
+////	//		cout << lists[j];
+////	//	cout << " ";
+////	//}
+////	for (int i = 0; name[i] != NULL; i++)
+////	{
+////		printf("%x", name[i]);
+////		cout << " ";
+////	}
+////	
+////	return 0;
+////}
 #include <iostream>
+#include <time.h>
 
 using namespace std;
 
-int swap(int a1, int b1)
-{
-	int store;
-	store = a1;
-	a1 = b1;
-	b1 = store;
-}
-
-int swap(int a2, int b2)
-{
-	
-}
-
 int main()
 {
-	int a, b;
-	cin >> a, b;
+	struct tm a;
+	unsigned int time_n = time(NULL);
+	cout << time_n << endl;
 
-	swap(a, b);
-	cout << a << " " << b << endl;
+	a.tm_sec = 0;
+	a.tm_min = 0;
+	a.tm_isdst = 0;
+	cin >> a.tm_year >> a.tm_mon >> a.tm_mday;
+	a.tm_year -= 1970;
+	a.tm_mon -= 1;
 
-	swap(a, b);
-	cout << a << " " << b << endl;
+	time_t check_time = mktime(&a);
+	cout << check_time;
+	//static __inline time_t mktime(struct tm * comst _Tm)
 }
+/*
+1.현재시간을 초로 가져오기
+2.내가 태어났을때의 연 월 일 가져오기
+3.그것을 초로 바꾸기
+3.현재시간을 초로 바꾼것에서 내가 태어난 연 월 일을 초로 바꾼 값을 빼기
+4.출력하기
+*/
