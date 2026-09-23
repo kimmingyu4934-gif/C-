@@ -1,180 +1,195 @@
-package ±è¹Î±Ô;
+package ê¹€ë¯¼ê·œ;
 
 import java.util.Scanner;
 
 public class game 
 {
-	User ¿ë»ç;
-	Monster ½½¶óÀÓ, ¿ÀÅ©, °íºí¸°;
+	User ìš©ì‚¬;
+	Monster ìŠ¬ë¼ì„, ì˜¤í¬, ê³ ë¸”ë¦°;
 	Monster now_enemy;
 	Scanner sc = new Scanner(System.in);
 	int chose;
 
 	public game() 
 	{	
-		¿ë»ç = new User();
-		¿ë»ç.lv = 5;
-		¿ë»ç.hp = 180;
-		¿ë»ç.attack = 45;
-		¿ë»ç.defence = 20;
-		¿ë»ç.gold = 40;
-		¿ë»ç.xp = 0;
+		ìš©ì‚¬ = new User();
+		ìš©ì‚¬.lv = 5;
+		ìš©ì‚¬.hp = 180;
+		ìš©ì‚¬.attack = 45;
+		ìš©ì‚¬.defence = 20;
+		ìš©ì‚¬.gold = 40;
+		ìš©ì‚¬.xp = 0;
+			
+		ìŠ¬ë¼ì„ = new Monster();
+		ìŠ¬ë¼ì„.name = "ìŠ¬ë¼ì„";
+		ìŠ¬ë¼ì„.hp = 50;
+		ìŠ¬ë¼ì„.attack = 10;
+		ìŠ¬ë¼ì„.defence = 3;
+			
+		ê³ ë¸”ë¦° = new Monster();
+		ê³ ë¸”ë¦°.name = "ê³ ë¸”ë¦°";
+		ê³ ë¸”ë¦°.hp = 80;
+		ê³ ë¸”ë¦°.attack = 15;
+		ê³ ë¸”ë¦°.defence = 5;
 		
-		½½¶óÀÓ = new Monster();
-		½½¶óÀÓ.name = "½½¶óÀÓ";
-		½½¶óÀÓ.hp = 50;
-		½½¶óÀÓ.attack = 10;
-		½½¶óÀÓ.defence = 3;
-		
-		°íºí¸° = new Monster();
-		°íºí¸°.name = "°íºí¸°";
-		°íºí¸°.hp = 80;
-		°íºí¸°.attack = 15;
-		°íºí¸°.defence = 5;
-		
-		¿ÀÅ© = new Monster();
-		¿ÀÅ©.name = "¿ÀÅ©";
-		¿ÀÅ©.hp = 150;
-		¿ÀÅ©.attack = 25;
-		¿ÀÅ©.defence = 10;
+		ì˜¤í¬ = new Monster();
+		ì˜¤í¬.name = "ì˜¤í¬";
+		ì˜¤í¬.hp = 150;
+		ì˜¤í¬.attack = 25;
+		ì˜¤í¬.defence = 10;
 	}
 
 
-	public void  init()
-	{	
-		Scanner sc = new Scanner(System.in);
-		printing(1);
-		System.out.println("========°ÔÀÓ½ÃÀÛ=========");
-		while(true)
-		{
-			printing(0);
-			int chose = sc.nextInt();
-			monster(chose);
-		}
-	}
-	
-	public void name()
-	{
-		System.out.printf("´Ğ³×ÀÓÀ» ÀÔ·ÂÇÏ¼¼¿ä.\n>>");
-		¿ë»ç.name = sc.next();
-	}
-	
-	public void monster(int a)
-	{
-		switch(a)
-		{
-			case 1:
-				now_enemy = ½½¶óÀÓ;
-				break;
-			case 2:
-				now_enemy = °íºí¸°;
-				break;
-			case 3:
-				now_enemy = ¿ÀÅ©;
-				break;
-			case 4:
-				System.out.println("¸¶À»·Î µ¹¾Æ°©´Ï´Ù.");
-				break;
-			default:
-				
-		}
-		System.out.println(now_enemy.name+"ÀÌ ³ªÅ¸³µ½À´Ï´Ù!");
-		System.out.println(now_enemy.name+" Hp : " + now_enemy.hp);
-		System.out.println(now_enemy.name+" °ø°İ·Â : " + now_enemy.attack);
-		
-		System.out.println("1.ÀüÅõ/n2.µµ¸Á°¡±â");	System.out.print(">>");
-		int c = sc.nextInt();
-		
-		if(c == 1)
-		{
-			while(now_enemy.hp <= 0)
+		public void  init()
+		{	
+			Scanner sc = new Scanner(System.in);
+			name();
+			printing(1);
+			System.out.println("========ê²Œì„ì‹œì‘=========");
+			while(true)
 			{
-				¿ë»ç.hp -= now_enemy.attack;
-				now_enemy.hp -= ¿ë»ç.attack;
-				if(now_enemy.hp <= 0)
-				{
-					System.out.println("Ã³Ä¡ÇÏ¼Ì½À´Ï´Ù.");
-					¿ë»ç.xp += 10;
-					¿ë»ç.gold += 20;
-				}
+				printing(0);
+				int chose = sc.nextInt();
+				monster(chose);
+			}
+		}
+		
+		public void name()
+		{
+			System.out.printf("ë‹‰ë„¤ì„ì„ ì…ë ¥í•˜ì„¸ìš”.\n>>");
+			ìš©ì‚¬.name = sc.next();
+		}
+		
+		public void monster(int a)
+		{
+			switch(a)
+			{
+				case 1:
+					now_enemy = ìŠ¬ë¼ì„;
+					break;
+				case 2:
+					now_enemy = ê³ ë¸”ë¦°;
+					break;
+				case 3:
+					now_enemy = ì˜¤í¬;
+					break;
+				case 4:
+					System.out.println("ë§ˆì„ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
+					break;
+				default:
+					
+			}
+			if(0<a && a<4)
+			{
+				int store = now_enemy.hp;
+				System.out.println(now_enemy.name+"ì´ ë‚˜íƒ€ë‚¬ìŠµë‹ˆë‹¤!");
+				System.out.println(now_enemy.name+" Hp : " + now_enemy.hp);
+				System.out.println(now_enemy.name+" ê³µê²©ë ¥ : " + now_enemy.attack);
 				
-				else
+				System.out.println("1.ì „íˆ¬\n2.ë„ë§ê°€ê¸°");	System.out.print(">>");
+				int c = sc.nextInt();
+				
+				if(c == 1)
 				{
-					printing(2);
-					chose = sc.nextInt();
-					if(chose == 1)
+					while(now_enemy.hp > 0)
 					{
+						ìš©ì‚¬.hp -= now_enemy.attack;
+						now_enemy.hp -= ìš©ì‚¬.attack;
+						if(now_enemy.hp <= 0)
+						{
+							System.out.println("ì²˜ì¹˜í•˜ì…¨ìŠµë‹ˆë‹¤.");
+							System.out.println("ê²½í—˜ì¹˜ 10++");
+							System.out.println("ê³¨ë“œ20++");
+							ìš©ì‚¬.xp += 10;
+							ìš©ì‚¬.gold += 20;
+							now_enemy.hp = store;
+						}
 						
-					}
-					
-					else
-					{
-						System.out.println("¹«»çÈ÷ µµ¸ÁÃÆ½À´Ï´Ù.");
-						break;
+						else
+						{
+							printing(2);
+							chose = sc.nextInt();
+							if(chose == 1)
+							{
+								
+							}
+							
+							else
+							{
+								System.out.println("ë¬´ì‚¬íˆ ë„ë§ì³¤ìŠµë‹ˆë‹¤.");
+								break;
+							}
+						}
+							
 					}
 				}
-					
+				if(c == 2)
+				{
+					System.out.println("ë§ˆì„ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
+				}
 			}
 			
-			if(c == 2)
-			{
-				System.out.println("¸¶À»·Î µ¹¾Æ°©´Ï´Ù.");
-			}
-			}
-	}
-	
-	public void printing(int i)
-	{
-		if(i==0)
-		{
-			System.out.println("===== »ç³ÉÅÍ =====");
-			System.out.println("1. ½½¶óÀÓ");
-			System.out.println("2. °íºí¸°");
-			System.out.println("3. ¿ÀÅ©");
-			System.out.println("4. µ¹¾Æ°¡±â");
-			System.out.print(">>");
-			return;
-		}
-		if(i==1)
-		{
-			System.out.println("[" + ¿ë»ç.name + "]Lv." + ¿ë»ç.lv + "Àü»ç");
-			System.out.println("");
-			System.out.println("HP : "+¿ë»ç.hp);
-			System.out.println("°ø°İ·Â : "+ ¿ë»ç.attack);
-			System.out.println("¹æ¾î·Â : "+ ¿ë»ç.defence);
-			System.out.println("ÀÚ¿ø : " + ¿ë»ç.gold);
 		}
 		
-		if(i == 2)
+		public void printing(int i)
 		{
-			System.out.println("ÇöÀç ¸ó½ºÅÍ hp : " + now_enemy.hp);
-			System.out.println("1.°è¼Ó ½Î¿ì±â/n2.µµ¸Á°¡±â");
-			System.out.print(">>");
+			if(i==0)
+			{
+				System.out.println("===== ì‚¬ëƒ¥í„° =====");
+				System.out.println("1. ìŠ¬ë¼ì„");
+				System.out.println("2. ê³ ë¸”ë¦°");
+				System.out.println("3. ì˜¤í¬");
+				System.out.println("4. ëŒì•„ê°€ê¸°");
+				System.out.print(">>");
+				return;
+			}
+			if(i==1)
+			{
+				System.out.println("[" + ìš©ì‚¬.name + "]Lv." + ìš©ì‚¬.lv + "ì „ì‚¬");
+				System.out.println("");
+				System.out.println("HP : "+ìš©ì‚¬.hp);
+				System.out.println("ê³µê²©ë ¥ : "+ ìš©ì‚¬.attack);
+				System.out.println("ë°©ì–´ë ¥ : "+ ìš©ì‚¬.defence);
+				System.out.println("ìì› : " + ìš©ì‚¬.gold);
+			}
+			
+			if(i == 2)
+			{
+				System.out.println("í˜„ì¬ ë‚˜ì˜ hp :" + ìš©ì‚¬.hp);
+				System.out.println("í˜„ì¬ ëª¬ìŠ¤í„° hp : " + now_enemy.hp);
+				System.out.println("1.ê³„ì† ì‹¸ìš°ê¸°\n2.ë„ë§ê°€ê¸°");
+				System.out.print(">>");
+			}
+		}
+		
+		public static void main(String[] args)
+		{
+			game g = new game();
+			g.init();
+		}
+		
+		public void Village()
+		{
+			System.out.println("=======ë§ˆì„=======");
+			System.out.println("1.ìƒì ");
+			System.out.println("2.ëª¬ìŠ¤í„° ë„ê°");
 		}
 	}
-	
-	public static void main(String[] args)
+	class User
 	{
-		game g = new game();
-		g.init();
+		public String name;
+		public int lv;
+		public int hp;
+		public int attack;
+		public int defence;
+		public int gold;
+		public int xp;
 	}
-}
-class User
-{
-	public String name;
-	public int lv;
-	public int hp;
-	public int attack;
-	public int defence;
-	public int gold;
-	public int xp;
-}
 
-class Monster
-{
-	public String name;
-	public int hp;
-	public int attack;
-	public int defence;
-}
-
+	class Monster
+	{
+		public String name;
+		public int hp;
+		public int attack;
+		public int defence;
+	}
