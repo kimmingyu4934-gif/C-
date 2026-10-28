@@ -52,22 +52,28 @@ public class game {
 		용사.name = sc.nextLine();
 	}
 
-	public void monster(int a) {
-		switch (a) {
-		case 1:
-			now_enemy = 슬라임;
-			break;
-		case 2:
-			now_enemy = 고블린;
-			break;
-		case 3:
-			now_enemy = 오크;
-			break;
-		case 4:
-			System.out.println("마을로 돌아갑니다.");
-			break;
-		default:
-
+	public void monster(int a) 
+	{
+		if(a<1 || a >5)
+			return;
+		else
+		{
+			switch (a) 
+			{
+			case 1:
+				now_enemy = 슬라임;
+				break;
+			case 2:
+				now_enemy = 고블린;
+				break;
+			case 3:
+				now_enemy = 오크;
+				break;
+			case 4:
+				System.out.println("마을로 돌아갑니다.");
+				break;
+			default:
+			}
 		}
 		if (0 < a && a < 4) {
 			int store = now_enemy.hp;
@@ -295,10 +301,3 @@ class Item{
 	}
 	
 }
-//
-//class Price 
-//{
-//	public int attack;
-//	public int defence;
-//	public int xp;
-//}
